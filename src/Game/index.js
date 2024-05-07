@@ -131,9 +131,7 @@ class Game extends Component {
         </>
       )
     }
-
-    // Default return statement to handle other cases
-    return null // or return some default view
+    return null
   }
 
   reset = () => {
