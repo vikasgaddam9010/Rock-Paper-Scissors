@@ -57,82 +57,85 @@ class Game extends Component {
   }
 
   renderRockOrPaperOrScissorView = () => {
-    const {playerId, opponentId} = this.state
+  const { playerId, opponentId } = this.state;
 
-    if (playerId === 0) {
-      if (opponentId === 0) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-            <p>IT IS DRAW</p>
-          </>
-        )
-      }
-      if (opponentId === 1) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-            <p>YOU WON</p>
-          </>
-        )
-      }
+  if (playerId === 0) {
+    if (opponentId === 0) {
       return (
         <>
           <div>{this.getRockView()}</div>
-          <p>YOU LOSE</p>
+          <p>IT IS DRAW</p>
         </>
-      )
+      );
     }
-    if (playerId === 1) {
-      if (opponentId === 1) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-            <p>IT IS DRAW</p>
-          </>
-        )
-      }
-      if (opponentId === 2) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-            <p>YOU WON</p>
-          </>
-        )
-      }
+    if (opponentId === 1) {
       return (
         <>
           <div>{this.getRockView()}</div>
-          <p>YOU LOSE</p>
+          <p>YOU WON</p>
         </>
-      )
+      );
     }
-    if (playerId === 2) {
-      if (opponentId === 2) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-
-            <p>IT IS DRAW</p>
-          </>
-        )
-      }
-      if (opponentId === 0) {
-        return (
-          <>
-            <div>{this.getRockView()}</div>
-            <p>YOU WON</p>
-          </>
-        )
-      }
-      return (
-        <>
-          <div>{this.getRockView()}</div>
-          <p>YOU LOSE</p>
-        </>
-      )
-    }
+    return (
+      <>
+        <div>{this.getRockView()}</div>
+        <p>YOU LOSE</p>
+      </>
+    );
   }
+  if (playerId === 1) {
+    if (opponentId === 1) {
+      return (
+        <>
+          <div>{this.getRockView()}</div>
+          <p>IT IS DRAW</p>
+        </>
+      );
+    }
+    if (opponentId === 2) {
+      return (
+        <>
+          <div>{this.getRockView()}</div>
+          <p>YOU WON</p>
+        </>
+      );
+    }
+    return (
+      <>
+        <div>{this.getRockView()}</div>
+        <p>YOU LOSE</p>
+      </>
+    );
+  }
+  if (playerId === 2) {
+    if (opponentId === 2) {
+      return (
+        <>
+          <div>{this.getRockView()}</div>
+          <p>IT IS DRAW</p>
+        </>
+      );
+    }
+    if (opponentId === 0) {
+      return (
+        <>
+          <div>{this.getRockView()}</div>
+          <p>YOU WON</p>
+        </>
+      );
+    }
+    return (
+      <>
+        <div>{this.getRockView()}</div>
+        <p>YOU LOSE</p>
+      </>
+    );
+  }
+  
+  // Default return statement to handle other cases
+  return null; // or return some default view
+}
+
 
   reset = () => {
     this.setState({isGameStarted: false})
