@@ -13,6 +13,7 @@ export const Container = styled.div`
   @media (max-width: 576px) {
     width: 100%;
     padding: 20px;
+    height: 95vh;
   }
 `
 
@@ -38,19 +39,20 @@ export const Para = styled.p`
 
 export const ScoreContainer = styled.div`
   padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 390px;
   width: 70%;
   border: 2px solid #ffffff;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @media (max-width: 576px) {
-    min-width: 450px;
-    width: 100%;
+    width: 70%;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `
 export const Div = styled.div`
@@ -76,10 +78,15 @@ export const DivScore = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 100px;
+  height: 120px;
   background-color: #ffffff;
   color: #223a5f;
   border-radius: 10px;
+  @media (max-width: 576px) {
+    width: 100px;
+    height: 125px;
+}
 `
 export const GameButtonContainer = styled(Div)`
   background-color: ${props => props.backColor};
